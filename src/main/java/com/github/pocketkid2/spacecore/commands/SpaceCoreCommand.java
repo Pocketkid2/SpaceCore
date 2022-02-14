@@ -10,7 +10,13 @@ import com.github.pocketkid2.spacecore.SpaceCorePlugin;
 
 public class SpaceCoreCommand implements CommandExecutor {
 
-	public abstract class SpaceCoreSubCommand {
+	public static abstract class SpaceCoreSubCommand {
+		protected SpaceCorePlugin plugin;
+
+		public SpaceCoreSubCommand(SpaceCorePlugin p) {
+			plugin = p;
+		}
+
 		public abstract List<String> names();
 
 		public abstract String usage();
@@ -22,6 +28,8 @@ public class SpaceCoreCommand implements CommandExecutor {
 		public abstract int maxArgs();
 
 		public abstract int minArgs();
+
+		public abstract void execute(String label, String[] args, CommandSender sender);
 	}
 
 	private SpaceCorePlugin plugin;
