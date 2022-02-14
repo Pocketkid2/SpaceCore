@@ -5,4 +5,8 @@ description: ${description}
 api-version: 1.18
 author: ${author}
 commands:
+    spacecore:
+        description: Base command for the plugin
+        usage: /<command> <args>
+        aliases: [sc]
 permissions:

@@ -7,6 +7,7 @@ public class SpaceCorePlugin extends JavaPlugin {
 	@Override
 	public void onEnable() {
 		saveDefaultConfig();
+		getCommand("spacecore").setExecutor(new SpaceCoreCommand(this));
 		getLogger().info("Enabled!");
 	}
 
