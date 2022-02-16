@@ -20,8 +20,13 @@ public class CreateWorldSubCommand extends SpaceCoreSubCommand {
 	}
 
 	@Override
+	public String description() {
+		return "Creates a world with the given name and generator type";
+	}
+
+	@Override
 	public String usage() {
-		return "createworld/cw <name> [type]";
+		return "createworld/cw <name> <type>";
 	}
 
 	@Override
@@ -41,11 +46,11 @@ public class CreateWorldSubCommand extends SpaceCoreSubCommand {
 
 	@Override
 	public int minArgs() {
-		return 1;
+		return 2;
 	}
 
 	@Override
-	public void execute(String label, String[] args, CommandSender sender) {
+	public void execute(String[] args, CommandSender sender) {
 		// TODO Auto-generated method stub
 
 	}

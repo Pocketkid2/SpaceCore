@@ -20,6 +20,11 @@ public class DeleteWorldSubCommand extends SpaceCoreSubCommand {
 	}
 
 	@Override
+	public String description() {
+		return "Deletes the specified world";
+	}
+
+	@Override
 	public String usage() {
 		return "deleteworld/dw <name>";
 	}
@@ -45,7 +50,7 @@ public class DeleteWorldSubCommand extends SpaceCoreSubCommand {
 	}
 
 	@Override
-	public void execute(String label, String[] args, CommandSender sender) {
+	public void execute(String[] args, CommandSender sender) {
 		// TODO Auto-generated method stub
 
 	}

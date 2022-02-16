@@ -21,6 +21,11 @@ public class ListWorldsSubCommand extends SpaceCoreSubCommand {
 	}
 
 	@Override
+	public String description() {
+		return "Lists all worlds";
+	}
+
+	@Override
 	public String usage() {
 		return "listworlds/lw [filter]";
 	}
@@ -46,7 +51,7 @@ public class ListWorldsSubCommand extends SpaceCoreSubCommand {
 	}
 
 	@Override
-	public void execute(String label, String[] args, CommandSender sender) {
+	public void execute(String[] args, CommandSender sender) {
 		// List<World> worlds = plugin.getServer().getWorlds().stream().filter(w ->
 		// w.getGenerator() instanceof
 		// SpaceChunkGenerator).collect(Collectors.toList());
